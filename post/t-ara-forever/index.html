@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>文章归档 | sujunxuan</title>
+<title>T-ara Forever! | sujunxuan</title>
 <meta name="description" content="知之为知之，不知为不知">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,6 +13,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://sujunxuan.github.io/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -91,40 +97,38 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
+          <div class="post-detail">
+            <h2 class="post-title">T-ara Forever!</h2>
+            <div class="post-date">2019-07-15</div>
+            
+              <div class="feature-container" style="background-image: url('https://sujunxuan.github.io/post-images/t-ara-forever.jpg')">
+              </div>
+            
+            <div class="post-content">
+              <p>T-ara go go go go !!!</p>
 
-          <h2 class="archives-title">文章归档</h2>
-          <div class="archives-container">
+            </div>
             
-              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2019</h2>
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://sujunxuan.github.io/post/hello-world">
+                  <h3 class="post-title">
+                    Hello world
+                  </h3>
+                </a>
+              </div>
+            
+
+            
               
-                
-                  <article class="post">
-                    <a href="https://sujunxuan.github.io/post/t-ara-forever">
-                      <h2 class="post-title">
-                        T-ara Forever!
-                      </h2>
-                    </a>
-                  </article>
-                
+                <div id="gitalk-container" data-aos="fade-in"></div>
               
-                
-                  <article class="post">
-                    <a href="https://sujunxuan.github.io/post/hello-world">
-                      <h2 class="post-title">
-                        Hello world
-                      </h2>
-                    </a>
-                  </article>
-                
+
               
             
+
           </div>
-
-          <div class="pagination-container">
-  
-  
-</div>
 
         </div>
       </div>
@@ -146,6 +150,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'cfd2e5ba4680b5e66633',
+        clientSecret: 'd360782c9b6d8efd6f09a771f8ec24868e2022b9',
+        repo: 'sujunxuan.github.io',
+        owner: 'sujunxuan',
+        admin: ['sujunxuan'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
